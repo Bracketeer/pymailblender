@@ -108,8 +108,6 @@ class clientinfomodalgui(Ui_ClientInfoModal_2):
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     dialog = QtWidgets.QDialog()
-
     prog = clientinfomodalgui(dialog)
-
     dialog.show()
     sys.exit(app.exec_())
