@@ -1,6 +1,8 @@
 import sys
 import pickle
-import tinys3
+import json
+# import tinys3
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 from clientinfomodal import Ui_ClientInfoModal_2
 
@@ -12,13 +14,13 @@ class clientinfomodalgui(Ui_ClientInfoModal_2):
         self.setupUi(dialog)
         self.SaveBtn.clicked.connect(self.addClientInfo)
         self.CancelBtn.clicked.connect(sys.exit)
-        self.data = "data.dat"
+        self.data = "data.json"
         self.clientinfo = {}
 
 
         try:
             fileObject = open(self.data, "rb")
-            self.clientinfo = pickle.load(fileObject)
+            self.clientinfo = json.load(fileObject)
             fileObject.close()
 
         # If no data file is found, return empty dictionary
@@ -26,15 +28,15 @@ class clientinfomodalgui(Ui_ClientInfoModal_2):
             self.clientinfo = {}
 
     def write(self):
-        fileObject = open(self.data, "wb")
-        pickle.dump(self.clientinfo, fileObject)
+        with open('data.json', mode='a', encoding='utf-8') as fileObject:
+            json.dump(self.clientinfo, fileObject)
         fileObject.close()
 
     # Read Serialized file
     def read(self, data):
         try:
-            fileObject = open(self.data, "rb")
-            self.clientinfo = pickle.load(fileObject)
+            fileObject = open(self.data, "r")
+            self.clientinfo = json.load(fileObject)
             fileObject.close()
 
         # If no data file is found, return empty dictionary
@@ -59,16 +61,12 @@ class clientinfomodalgui(Ui_ClientInfoModal_2):
         homeValue = self.HomeValueURLInput.text()
         homeSearch = self.HomeSearchURLInput.text()
         hexColor = self.HexColorInput.text()
-        validatezip = 0
-        validatehex = 0
-        validatestate = 0
 
         print(self.clientinfo)
         if len(zip) != 5 and zip.isnumeric() == False:
             print('Please enter a proper zip code')
         elif len(zip) == 5 and zip.isnumeric() == True:
             print(zip)
-            validatezip = 1
 
         if hexColor.startswith('#') and len(hexColor) == 7:
             self.HexColorInput.setStyleSheet("background-color:" + hexColor + ";")
@@ -79,34 +77,40 @@ class clientinfomodalgui(Ui_ClientInfoModal_2):
             self.HexColorInput.setStyleSheet("background-color:" + hexColor + ";")
             print(hexColor)
 
-        if len(hexColor) == 7:
-            print(hexColor)
-            validatehex = 1
-
-
         if state == 'State':
             print('Please select a State')
-        else:
-           validatestate = 1
 
-        validateall = validatestate + validatehex + validatezip
-        if validateall != 10:
-            client = self.clientinfo
-            name = firstName + '_' + lastName
-            print(validateall)
-            print(name)
-            client[name] = {firstName, lastName, companyName, address1, address2, city, zip, state, email, phone, blog, homeValue, homeSearch, hexColor}
-            self.write()
-            print(client)
-            sys.exit()
+        client = self.clientinfo
+        name = firstName + ' ' + lastName
+        print(name)
+        client[name] = {
+            'firstName': firstName,
+            'lastName': lastName,
+            'companyName': companyName,
+            'address1': address1,
+            'address2': address2,
+            'city': city,
+            'zip': zip,
+            'state': state,
+            'email': email,
+            'phone': phone,
+            'blog': blog,
+            'homeValue': homeValue,
+            'homeSearch': homeSearch,
+            'hexColor': hexColor
+            }
+
+        self.write()
+        print(client)
+        sys.exit()
 
 
 
 if __name__ == '__main__':
-	app = QtWidgets.QApplication(sys.argv)
-	dialog = QtWidgets.QDialog()
+    app = QtWidgets.QApplication(sys.argv)
+    dialog = QtWidgets.QDialog()
 
-	prog = clientinfomodalgui(dialog)
+    prog = clientinfomodalgui(dialog)
 
-	dialog.show()
-	sys.exit(app.exec_())
+    dialog.show()
+    sys.exit(app.exec_())

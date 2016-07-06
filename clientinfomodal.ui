@@ -9,12 +9,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>729</width>
-    <height>428</height>
+    <width>568</width>
+    <height>383</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Client Infomation</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -38,8 +41,20 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_6">
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>10</number>
+         </property>
          <item row="0" column="0">
           <widget class="QLineEdit" name="CityInput">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>City</string>
            </property>
@@ -47,6 +62,12 @@
          </item>
          <item row="0" column="2">
           <widget class="QLineEdit" name="ZipInput">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>Zip</string>
            </property>
@@ -54,6 +75,12 @@
          </item>
          <item row="0" column="1">
           <widget class="QComboBox" name="StateComboBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <item>
             <property name="text">
              <string>State</string>
@@ -333,8 +360,20 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_7">
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>10</number>
+         </property>
          <item row="0" column="0">
           <widget class="QLineEdit" name="EmailInput">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>Email</string>
            </property>
@@ -342,6 +381,12 @@
          </item>
          <item row="0" column="1">
           <widget class="QLineEdit" name="PhoneInput">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>Phone</string>
            </property>
@@ -359,8 +404,20 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_8">
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>10</number>
+         </property>
          <item row="0" column="2">
           <widget class="QLineEdit" name="HomeSearchURLInput">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>Home Search URL</string>
            </property>
@@ -368,6 +425,12 @@
          </item>
          <item row="0" column="1">
           <widget class="QLineEdit" name="HomeValueURLInput">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>Home Value URL</string>
            </property>
@@ -375,6 +438,12 @@
          </item>
          <item row="0" column="0">
           <widget class="QLineEdit" name="BlogURLInput">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>Blog URL</string>
            </property>
@@ -392,15 +461,36 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>10</number>
+         </property>
          <item row="0" column="0">
           <widget class="QLineEdit" name="FirstNameInput">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>First Name</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
           <widget class="QLineEdit" name="LastNameInput">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>Last Name</string>
            </property>
@@ -418,8 +508,17 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_4">
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
          <item row="0" column="0">
           <widget class="QLineEdit" name="CompanyNameInput">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>Company Name</string>
            </property>
@@ -437,8 +536,20 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_5">
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>10</number>
+         </property>
          <item row="0" column="0">
           <widget class="QLineEdit" name="Address1Input">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>Address 1</string>
            </property>
@@ -446,6 +557,12 @@
          </item>
          <item row="0" column="1">
           <widget class="QLineEdit" name="Address2Input">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>Address 2</string>
            </property>
@@ -463,8 +580,20 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_10">
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
          <item row="0" column="1">
           <widget class="QPushButton" name="SaveBtn">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="text">
             <string>Save</string>
            </property>
@@ -475,6 +604,12 @@
          </item>
          <item row="0" column="2">
           <widget class="QPushButton" name="CancelBtn">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="text">
             <string>Cancel</string>
            </property>
@@ -505,8 +640,20 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_9">
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>10</number>
+         </property>
          <item row="0" column="0">
           <widget class="QLineEdit" name="HexColorInput">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="placeholderText">
             <string>Hex Color</string>
            </property>
