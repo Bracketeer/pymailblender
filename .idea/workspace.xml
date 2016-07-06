@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3e620318-45ed-40d1-a253-d16634e6a112" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clientInfoModalFunctions.py" afterPath="$PROJECT_DIR$/clientInfoModalFunctions.py" />
     </list>
     <ignored path="pymailblender.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +37,8 @@
       <file leaf-file-name="clientInfoModalFunctions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clientInfoModalFunctions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+            <state relative-caret-position="281">
+              <caret line="61" column="143" selection-start-line="61" selection-start-column="143" selection-end-line="61" selection-end-column="143" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -64,9 +65,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="width" value="1928" />
-    <option name="height" value="1052" />
+    <option name="x" value="383" />
+    <option name="y" value="127" />
+    <option name="width" value="1272" />
+    <option name="height" value="716" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -95,24 +97,7 @@
     <panes>
       <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pymailblender" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pymailblender" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pymailblender" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="Scope" />
     </panes>
@@ -327,11 +312,18 @@
       <option name="project" value="LOCAL" />
       <updated>1467783204105</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created a modal for client input, added some validation to some fields I'm not particularly happy with...but it will work for now.&#10;">
+      <created>1467783370980</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1467783370980</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1928" height="1052" extended-state="6" />
+    <frame x="383" y="127" width="1272" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16458334" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -414,8 +406,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/clientInfoModalFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        <state relative-caret-position="281">
+          <caret line="61" column="143" selection-start-line="61" selection-start-column="143" selection-end-line="61" selection-end-column="143" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

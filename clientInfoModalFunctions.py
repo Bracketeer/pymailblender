@@ -59,7 +59,7 @@ class clientinfomodalgui(Ui_ClientInfoModal_2):
         validateall = validatestate + validatehex + validatezip
         if validateall == 3:
             print(validateall)
-            print(firstName, lastName, companyName, address1, address2, city, zip, state, email, phone, blog, homeValue, homeSearch, sep=" | ")
+            print(firstName, lastName, companyName, address1, address2, city, zip, state, email, phone, blog, homeValue, homeSearch, hexColor, sep=" | ")
             sys.exit()
 
 
