@@ -1,4 +1,6 @@
 import sys
+import pickle
+import tinys3
 from PyQt5 import QtCore, QtGui, QtWidgets
 from clientinfomodal import Ui_ClientInfoModal_2
 
@@ -10,6 +12,37 @@ class clientinfomodalgui(Ui_ClientInfoModal_2):
         self.setupUi(dialog)
         self.SaveBtn.clicked.connect(self.addClientInfo)
         self.CancelBtn.clicked.connect(sys.exit)
+        self.data = "data.dat"
+        self.clientinfo = {}
+
+
+        try:
+            fileObject = open(self.data, "rb")
+            self.clientinfo = pickle.load(fileObject)
+            fileObject.close()
+
+        # If no data file is found, return empty dictionary
+        except:
+            self.clientinfo = {}
+
+    def write(self):
+        fileObject = open(self.data, "wb")
+        pickle.dump(self.clientinfo, fileObject)
+        fileObject.close()
+
+    # Read Serialized file
+    def read(self, data):
+        try:
+            fileObject = open(self.data, "rb")
+            self.clientinfo = pickle.load(fileObject)
+            fileObject.close()
+
+        # If no data file is found, return empty dictionary
+        except FileNotFoundError:
+            self.clientinfo = {}
+
+    def phoneFormat(self, p):
+        return format(int(p[:-1]), ",").replace(",", "-") + p[-1]
 
     def addClientInfo(self, clientinfomodalgui):
         firstName = self.FirstNameInput.text()
@@ -21,7 +54,7 @@ class clientinfomodalgui(Ui_ClientInfoModal_2):
         zip = self.ZipInput.text()
         state = self.StateComboBox.currentText()
         email = self.EmailInput.text()
-        phone = self.PhoneInput.text()
+        phone = self.phoneFormat(self.PhoneInput.text())
         blog = self.BlogURLInput.text()
         homeValue = self.HomeValueURLInput.text()
         homeSearch = self.HomeSearchURLInput.text()
@@ -30,6 +63,7 @@ class clientinfomodalgui(Ui_ClientInfoModal_2):
         validatehex = 0
         validatestate = 0
 
+        print(self.clientinfo)
         if len(zip) != 5 and zip.isnumeric() == False:
             print('Please enter a proper zip code')
         elif len(zip) == 5 and zip.isnumeric() == True:
@@ -56,10 +90,16 @@ class clientinfomodalgui(Ui_ClientInfoModal_2):
            validatestate = 1
 
         validateall = validatestate + validatehex + validatezip
-        if validateall == 3:
+        if validateall != 10:
+            client = self.clientinfo
+            name = firstName + '_' + lastName
             print(validateall)
-            print(firstName, lastName, companyName, address1, address2, city, zip, state, email, phone, blog, homeValue, homeSearch, sep=" | ")
+            print(name)
+            client[name] = {firstName, lastName, companyName, address1, address2, city, zip, state, email, phone, blog, homeValue, homeSearch, hexColor}
+            self.write()
+            print(client)
             sys.exit()
+
 
 
 if __name__ == '__main__':
