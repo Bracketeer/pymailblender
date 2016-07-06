@@ -26,6 +26,7 @@ class clientinfomodalgui(Ui_ClientInfoModal_2):
         homeValue = self.HomeValueURLInput.text()
         homeSearch = self.HomeSearchURLInput.text()
         hexColor = self.HexColorInput.text()
+        #Redo, not remotely elegent
         validatezip = 0
         validatehex = 0
         validatestate = 0
