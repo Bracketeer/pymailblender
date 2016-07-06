@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClientInfoModal_2</class>
+ <widget class="QDialog" name="ClientInfoModal_2">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>729</width>
+    <height>374</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Client Infomation</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="3" column="0">
+       <widget class="QFrame" name="frame_5">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="CityInput">
+           <property name="placeholderText">
+            <string>City</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLineEdit" name="ZipInput">
+           <property name="placeholderText">
+            <string>Zip</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="StateComboBox">
+           <item>
+            <property name="text">
+             <string>State</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AL</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AK</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AZ</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>AR</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>CA</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>CO</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>CT</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>DC</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>DE</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>FL</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>GA</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>HI</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ID</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>IL</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>IN</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>IA</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>KS</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>KY</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>LA</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ME</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MD</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MA</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MI</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MN</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MS</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MO</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>MT</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>NE</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>NV</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>NH</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>NJ</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>NM</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>NY</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>NC</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ND</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>OH</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>OK</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>OR</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>PA</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>RI</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>SC</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>SD</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>TN</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>TX</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>UT</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>VA</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>VT</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>VA</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>WA</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>WV</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>WI</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>WY</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QFrame" name="frame_6">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="EmailInput">
+           <property name="placeholderText">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="PhoneInput">
+           <property name="placeholderText">
+            <string>Phone</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QFrame" name="frame_7">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_8">
+         <item row="0" column="2">
+          <widget class="QLineEdit" name="HomeSearchURLInput">
+           <property name="placeholderText">
+            <string>Home Search URL</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="HomeValueURLInput">
+           <property name="placeholderText">
+            <string>Home Value URL</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="BlogURLInput">
+           <property name="placeholderText">
+            <string>Blog URL</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QFrame" name="frame_2">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="FirstNameInput">
+           <property name="placeholderText">
+            <string>First Name</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="LastNameInput">
+           <property name="placeholderText">
+            <string>Last Name</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QFrame" name="frame_3">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="CompanyNameInput">
+           <property name="placeholderText">
+            <string>Company Name</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QFrame" name="frame_4">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="Address1Input">
+           <property name="placeholderText">
+            <string>Address 1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="Address2Input">
+           <property name="placeholderText">
+            <string>Address 2</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QFrame" name="frame_9">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_10">
+         <item row="0" column="1">
+          <widget class="QPushButton" name="SaveBtn">
+           <property name="text">
+            <string>Save</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="CancelBtn">
+           <property name="text">
+            <string>Cancel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QFrame" name="frame_8">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="HexColorInput">
+           <property name="placeholderText">
+            <string>Hex Color</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="1">
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>FirstNameInput</tabstop>
+  <tabstop>LastNameInput</tabstop>
+  <tabstop>CompanyNameInput</tabstop>
+  <tabstop>Address1Input</tabstop>
+  <tabstop>Address2Input</tabstop>
+  <tabstop>CityInput</tabstop>
+  <tabstop>StateComboBox</tabstop>
+  <tabstop>ZipInput</tabstop>
+  <tabstop>EmailInput</tabstop>
+  <tabstop>PhoneInput</tabstop>
+  <tabstop>BlogURLInput</tabstop>
+  <tabstop>HomeValueURLInput</tabstop>
+  <tabstop>HomeSearchURLInput</tabstop>
+  <tabstop>SaveBtn</tabstop>
+  <tabstop>CancelBtn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
