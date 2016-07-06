@@ -12,7 +12,7 @@ class Ui_ClientInfoModal_2(object):
     def setupUi(self, ClientInfoModal_2):
         ClientInfoModal_2.setObjectName("ClientInfoModal_2")
         ClientInfoModal_2.setWindowModality(QtCore.Qt.ApplicationModal)
-        ClientInfoModal_2.resize(729, 374)
+        ClientInfoModal_2.resize(729, 428)
         ClientInfoModal_2.setModal(True)
         self.gridLayout = QtWidgets.QGridLayout(ClientInfoModal_2)
         self.gridLayout.setObjectName("gridLayout")
@@ -173,7 +173,7 @@ class Ui_ClientInfoModal_2(object):
         self.gridLayout_10.addItem(spacerItem, 0, 0, 1, 1)
         self.gridLayout_2.addWidget(self.frame_9, 7, 0, 1, 1)
         self.frame_8 = QtWidgets.QFrame(self.frame)
-        self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_8.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_8.setObjectName("frame_8")
         self.gridLayout_9 = QtWidgets.QGridLayout(self.frame_8)
@@ -202,7 +202,8 @@ class Ui_ClientInfoModal_2(object):
         ClientInfoModal_2.setTabOrder(self.PhoneInput, self.BlogURLInput)
         ClientInfoModal_2.setTabOrder(self.BlogURLInput, self.HomeValueURLInput)
         ClientInfoModal_2.setTabOrder(self.HomeValueURLInput, self.HomeSearchURLInput)
-        ClientInfoModal_2.setTabOrder(self.HomeSearchURLInput, self.SaveBtn)
+        ClientInfoModal_2.setTabOrder(self.HomeSearchURLInput, self.HexColorInput)
+        ClientInfoModal_2.setTabOrder(self.HexColorInput, self.SaveBtn)
         ClientInfoModal_2.setTabOrder(self.SaveBtn, self.CancelBtn)
 
     def retranslateUi(self, ClientInfoModal_2):
