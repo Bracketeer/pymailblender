@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e620318-45ed-40d1-a253-d16634e6a112" name="Default" comment="Added read and write functions to save to binary files and a formatting function for phone numbers">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clientinfomodal.ui" afterPath="$PROJECT_DIR$/clientinfomodal.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pymailblender.iml" afterPath="$PROJECT_DIR$/.idea/pymailblender.iml" />
+    <list default="true" id="3e620318-45ed-40d1-a253-d16634e6a112" name="Default" comment="switched from pickling the data into a .dat file to putting it in a json file. (at least for now)&#10;Changed the margin the the input boxes.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templateselector.ui" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templateselector.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clientInfoModalFunctions.py" afterPath="$PROJECT_DIR$/clientInfoModalFunctions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clientinfomodal.py" afterPath="$PROJECT_DIR$/clientinfomodal.py" />
     </list>
     <ignored path="pymailblender.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +31,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1190">
               <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1467823410938" expanded="true" signature="11168:13024" ph="..." />
+                <marker date="1467823410938" expanded="true" signature="11168:18894" ph="..." />
+                <marker date="1467823410938" expanded="true" signature="13073:18894" ph="..." />
+                <marker date="1467823410938" expanded="true" signature="18923:19146" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,11 +44,19 @@
       <file leaf-file-name="clientInfoModalFunctions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clientInfoModalFunctions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="templateselector.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templateselector.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,12 +71,13 @@
       <list>
         <option value="$PROJECT_DIR$/clientinfomodal.py" />
         <option value="$PROJECT_DIR$/clientInfoModalFunctions.py" />
+        <option value="$PROJECT_DIR$/templateselector.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2089" />
-    <option name="y" value="60" />
+    <option name="x" value="2161" />
+    <option name="y" value="55" />
     <option name="width" value="1400" />
     <option name="height" value="971" />
   </component>
@@ -123,7 +135,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Python.clientInfoModalFunctions">
+  <component name="RunManager" selected="Python.templateselector">
     <configuration default="false" name="clientinfomodal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,6 +166,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pymailblender" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clientInfoModalFunctions.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="templateselector" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pymailblender" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/templateselector.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -292,14 +321,16 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.clientinfomodal" />
       <item index="1" class="java.lang.String" itemvalue="Python.clientInfoModalFunctions" />
+      <item index="2" class="java.lang.String" itemvalue="Python.templateselector" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.clientInfoModalFunctions" />
-        <item index="1" class="java.lang.String" itemvalue="Python.clientinfomodal" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.templateselector" />
+        <item index="1" class="java.lang.String" itemvalue="Python.clientInfoModalFunctions" />
+        <item index="2" class="java.lang.String" itemvalue="Python.clientinfomodal" />
       </list>
     </recent_temporary>
   </component>
@@ -314,6 +345,14 @@
       <option name="presentableId" value="Default" />
       <updated>1467768580924</updated>
     </task>
+    <task id="LOCAL-00001" summary="switched from pickling the data into a .dat file to putting it in a json file. (at least for now)&#10;Changed the margin the the input boxes.">
+      <created>1467823593432</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1467823593432</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -326,7 +365,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2089" y="60" width="1400" height="971" extended-state="0" />
+    <frame x="2161" y="55" width="1400" height="971" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18280347" sideWeight="0.49199083" order="1" side_tool="false" content_ui="combo" />
@@ -353,7 +392,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added read and write functions to save to binary files and a formatting function for phone numbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added read and write functions to save to binary files and a formatting function for phone numbers" />
+    <MESSAGE value="switched from pickling the data into a .dat file to putting it in a json file. (at least for now)&#10;Changed the margin the the input boxes." />
+    <option name="LAST_COMMIT_MESSAGE" value="switched from pickling the data into a .dat file to putting it in a json file. (at least for now)&#10;Changed the margin the the input boxes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -366,7 +406,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1467823410938" expanded="true" signature="11168:13024" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="11168:18894" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="13073:18894" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="18923:19146" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -374,9 +419,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -384,7 +427,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1467823410938" expanded="true" signature="11168:13024" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="11168:18894" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="13073:18894" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="18923:19146" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -392,9 +440,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -402,7 +448,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1467823410938" expanded="true" signature="11168:13024" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="11168:18894" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="13073:18894" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="18923:19146" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -410,9 +461,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -420,7 +469,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1467823410938" expanded="true" signature="11168:13024" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="11168:18894" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="13073:18894" ph="..." />
+            <marker date="1467823410938" expanded="true" signature="18923:19146" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -432,13 +486,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templateselector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clientInfoModalFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

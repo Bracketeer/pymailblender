@@ -1,7 +1,6 @@
 import sys
-import pickle
 import json
-# import tinys3
+import tinys3
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from clientinfomodal import Ui_ClientInfoModal_2
