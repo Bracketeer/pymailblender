@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3e620318-45ed-40d1-a253-d16634e6a112" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templateselector.py" afterPath="$PROJECT_DIR$/templateselector.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templateselectorfunctions.py" afterPath="$PROJECT_DIR$/templateselectorfunctions.py" />
     </list>
     <ignored path="pymailblender.iws" />
@@ -38,7 +37,7 @@
       <file leaf-file-name="clientInfoModalFunctions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clientInfoModalFunctions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
+            <state relative-caret-position="1836">
               <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="112" selection-end-column="25" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -50,8 +49,8 @@
       <file leaf-file-name="templateselectorfunctions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templateselectorfunctions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="22" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -158,7 +157,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Python.clientInfoModalFunctions">
+  <component name="RunManager" selected="Python.templateselectorfunctions">
     <configuration default="false" name="clientinfomodal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -369,8 +368,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.clientInfoModalFunctions" />
-        <item index="1" class="java.lang.String" itemvalue="Python.templateselectorfunctions" />
+        <item index="0" class="java.lang.String" itemvalue="Python.templateselectorfunctions" />
+        <item index="1" class="java.lang.String" itemvalue="Python.clientInfoModalFunctions" />
         <item index="2" class="java.lang.String" itemvalue="Python.templateselector" />
         <item index="3" class="java.lang.String" itemvalue="Python.clientinfomodal" />
       </list>
@@ -411,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467838138177</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="attempting to make the client info modal open when selecting file&gt;new client. Will work on more once I get home">
+      <created>1467844681054</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1467844681054</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -432,7 +438,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.50277996" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32816228" sideWeight="0.4940429" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777116" sideWeight="0.49722" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33969012" sideWeight="0.49086577" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34009546" sideWeight="0.49086577" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.49086577" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18347895" sideWeight="0.50800914" order="0" side_tool="true" content_ui="tabs" />
@@ -461,7 +467,8 @@
     <MESSAGE value="Added read and write functions to save to binary files and a formatting function for phone numbers" />
     <MESSAGE value="switched from pickling the data into a .dat file to putting it in a json file. (at least for now)&#10;Changed the margin the the input boxes." />
     <MESSAGE value="Added a main window for email specific edits for each template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a main window for email specific edits for each template" />
+    <MESSAGE value="attempting to make the client info modal open when selecting file&gt;new client. Will work on more once I get home" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempting to make the client info modal open when selecting file&gt;new client. Will work on more once I get home" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -567,7 +574,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/clientInfoModalFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
+        <state relative-caret-position="1836">
           <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="112" selection-end-column="25" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -577,8 +584,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templateselectorfunctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="22" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
