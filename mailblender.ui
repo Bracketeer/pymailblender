@@ -34,9 +34,9 @@
       <property name="geometry">
        <rect>
         <x>728</x>
-        <y>240</y>
+        <y>258</y>
         <width>141</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -44,6 +44,11 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
       </property>
       <item>
        <property name="text">
@@ -305,9 +310,9 @@
       <property name="geometry">
        <rect>
         <x>278</x>
-        <y>370</y>
+        <y>394</y>
         <width>221</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -315,6 +320,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>homesearch.com</string>
       </property>
       <property name="placeholderText">
        <string>Home Search URL</string>
@@ -324,9 +337,9 @@
       <property name="geometry">
        <rect>
         <x>278</x>
-        <y>110</y>
+        <y>122</y>
         <width>291</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -335,8 +348,13 @@
         <height>30</height>
        </size>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string/>
+       <string>1234567890</string>
       </property>
       <property name="placeholderText">
        <string>Phone</string>
@@ -346,9 +364,9 @@
       <property name="geometry">
        <rect>
         <x>578</x>
-        <y>330</y>
+        <y>348</y>
         <width>291</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -356,6 +374,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>blog.com</string>
       </property>
       <property name="placeholderText">
        <string>Blog URL</string>
@@ -365,9 +391,9 @@
       <property name="geometry">
        <rect>
         <x>508</x>
-        <y>370</y>
+        <y>394</y>
         <width>221</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -375,6 +401,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>homevalue.com</string>
       </property>
       <property name="placeholderText">
        <string>Home Value URL</string>
@@ -384,9 +418,9 @@
       <property name="geometry">
        <rect>
         <x>578</x>
-        <y>240</y>
+        <y>258</y>
         <width>141</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -394,6 +428,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>12345</string>
       </property>
       <property name="placeholderText">
        <string>Zip</string>
@@ -403,9 +445,9 @@
       <property name="geometry">
        <rect>
         <x>578</x>
-        <y>110</y>
+        <y>122</y>
         <width>291</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -413,6 +455,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>brent.stradling@gmail.com</string>
       </property>
       <property name="placeholderText">
        <string>Email</string>
@@ -424,7 +474,7 @@
         <x>578</x>
         <y>30</y>
         <width>291</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -432,6 +482,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Stradling</string>
       </property>
       <property name="placeholderText">
        <string>Last Name</string>
@@ -441,9 +499,9 @@
       <property name="geometry">
        <rect>
         <x>278</x>
-        <y>240</y>
+        <y>258</y>
         <width>291</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -451,6 +509,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Omaha</string>
       </property>
       <property name="placeholderText">
        <string>City</string>
@@ -460,9 +526,9 @@
       <property name="geometry">
        <rect>
         <x>278</x>
-        <y>200</y>
+        <y>212</y>
         <width>291</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -470,6 +536,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>123 Main St.</string>
       </property>
       <property name="placeholderText">
        <string>Address 1</string>
@@ -479,9 +553,9 @@
       <property name="geometry">
        <rect>
         <x>578</x>
-        <y>200</y>
+        <y>212</y>
         <width>291</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -489,6 +563,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Suite 101</string>
       </property>
       <property name="placeholderText">
        <string>Address 2</string>
@@ -539,9 +621,9 @@
       <property name="geometry">
        <rect>
         <x>278</x>
-        <y>70</y>
+        <y>76</y>
         <width>591</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -549,6 +631,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Eyegoop</string>
       </property>
       <property name="placeholderText">
        <string>Company Name</string>
@@ -560,7 +650,7 @@
         <x>278</x>
         <y>30</y>
         <width>291</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -568,6 +658,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Brent</string>
       </property>
       <property name="placeholderText">
        <string>First Name</string>
@@ -580,9 +678,9 @@
       <property name="geometry">
        <rect>
         <x>278</x>
-        <y>330</y>
+        <y>348</y>
         <width>291</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -590,6 +688,14 @@
         <width>0</width>
         <height>30</height>
        </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>http://eyegoop.com</string>
       </property>
       <property name="placeholderText">
        <string>Website URL</string>
@@ -599,7 +705,7 @@
       <property name="geometry">
        <rect>
         <x>280</x>
-        <y>300</y>
+        <y>318</y>
         <width>101</width>
         <height>18</height>
        </rect>
@@ -647,7 +753,7 @@
       <property name="geometry">
        <rect>
         <x>280</x>
-        <y>170</y>
+        <y>182</y>
         <width>101</width>
         <height>18</height>
        </rect>
@@ -694,7 +800,7 @@
      <widget class="QLabel" name="FooterLogoLabel">
       <property name="geometry">
        <rect>
-        <x>630</x>
+        <x>890</x>
         <y>290</y>
         <width>191</width>
         <height>41</height>
@@ -719,7 +825,7 @@
       <property name="geometry">
        <rect>
         <x>280</x>
-        <y>420</y>
+        <y>440</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -743,10 +849,13 @@
       <property name="geometry">
        <rect>
         <x>738</x>
-        <y>370</y>
+        <y>394</y>
         <width>131</width>
-        <height>30</height>
+        <height>36</height>
        </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
       </property>
       <property name="styleSheet">
        <string notr="true"/>
@@ -763,7 +872,7 @@
          <x>0</x>
          <y>0</y>
          <width>91</width>
-         <height>30</height>
+         <height>36</height>
         </rect>
        </property>
        <property name="minimumSize">
@@ -772,6 +881,11 @@
          <height>30</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="autoFillBackground">
         <bool>false</bool>
        </property>
@@ -779,7 +893,7 @@
         <string notr="true"/>
        </property>
        <property name="text">
-        <string/>
+        <string>123456</string>
        </property>
        <property name="placeholderText">
         <string>Hex Color</string>
@@ -790,11 +904,29 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>30</y>
+        <y>76</y>
         <width>256</width>
-        <height>641</height>
+        <height>596</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>Brent Stradling</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </item>
      </widget>
      <widget class="QLabel" name="ClientListLabel">
       <property name="geometry">
@@ -818,6 +950,24 @@
       </property>
       <property name="scaledContents">
        <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>255</width>
+        <height>38</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Search</string>
       </property>
      </widget>
     </widget>

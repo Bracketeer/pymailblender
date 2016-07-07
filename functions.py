@@ -101,6 +101,7 @@ class mailblenderGui(Ui_MailBlender):
 
         self.write()
         self.clientListWidget.addItem(name)
+        print(client)
         self.clearAddClientFields()
 
     def clearAddClientFields(self):
@@ -111,14 +112,15 @@ class mailblenderGui(Ui_MailBlender):
         self.Address2Input.clear()
         self.CityInput.clear()
         self.ZipInput.clear()
-        self.StateComboBox.currentText(0)
+        self.StateComboBox.currentText()
         self.EmailInput.clear()
-        self.phoneFormat(self.PhoneInput.clear())
+        self.PhoneInput.clear()
         self.BlogURLInput.clear()
         self.HomeValueURLInput.clear()
         self.HomeSearchURLInput.clear()
         self.HexColorInput.clear()
-        print(client)
+        self.hexColorFrame.setStyleSheet("")
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
