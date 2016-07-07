@@ -11,10 +11,9 @@ class mailblenderGui(Ui_MailBlender):
         Ui_MailBlender.__init__(self)
         self.setupUi(MailBlender)
         self.SaveBtn.clicked.connect(self.addClientInfo)
-        self.CancelBtn.clicked.connect(sys.exit)
+        self.CancelBtn.clicked.connect(self.clearAddClientFields)
         self.data = "data.json"
         self.clientinfo = {}
-
 
         try:
             fileObject = open(self.data, "r")
@@ -67,12 +66,14 @@ class mailblenderGui(Ui_MailBlender):
             print(zip)
 
         if hexColor.startswith('#') and len(hexColor) == 7:
-            self.HexColorFrame.setStyleSheet("background-color:" + hexColor + ";")
+            self.hexColorFrame.setStyleSheet("QFrame#hexColorFrame{background-color:" + hexColor + ";}")
             print(hexColor)
 
         else:
             hexColor = '#'+hexColor
-            self.HexColorFrame.setStyleSheet("background-color:" + hexColor + ";")
+            self.HexColorInput.clear()
+            self.HexColorInput.insert(hexColor)
+            self.hexColorFrame.setStyleSheet("QFrame#hexColorFrame{background-color:" + hexColor + ";}")
             print(hexColor)
 
         if state == 'State':
@@ -99,11 +100,25 @@ class mailblenderGui(Ui_MailBlender):
             }
 
         self.write()
-        self.clientListWidget.addItem(client)
+        self.clientListWidget.addItem(name)
+        self.clearAddClientFields()
+
+    def clearAddClientFields(self):
+        self.FirstNameInput.clear()
+        self.LastNameInput.clear()
+        self.CompanyNameInput.clear()
+        self.Address1Input.clear()
+        self.Address2Input.clear()
+        self.CityInput.clear()
+        self.ZipInput.clear()
+        self.StateComboBox.currentText(0)
+        self.EmailInput.clear()
+        self.phoneFormat(self.PhoneInput.clear())
+        self.BlogURLInput.clear()
+        self.HomeValueURLInput.clear()
+        self.HomeSearchURLInput.clear()
+        self.HexColorInput.clear()
         print(client)
-
-
-
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
