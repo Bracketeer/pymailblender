@@ -8,7 +8,7 @@ class templateselectorgui(Ui_MainWindow, Ui_ClientInfoModal_2):
     def __init__(self, mainwindow):
         Ui_MainWindow.__init__(self)
         self.setupUi(mainwindow)
-        self.actionAdd_Client.triggered.connect(self.clientinfomodalgui)
+        self.actionAdd_Client.triggered.connect(self.addClient)
         self.HeroImageUploadBtn.clicked.connect(self.addClient)
 
     def addClient(self):
@@ -20,7 +20,6 @@ if __name__ == "__main__":
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
-
     prog = templateselectorgui(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())

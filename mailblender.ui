@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MailBlender</class>
+ <widget class="QMainWindow" name="MailBlender">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1267</width>
+    <height>765</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>107</y>
+      <width>1001</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">StackedWidget:(
+border{ 1px solid #fff;}
+)</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QLineEdit" name="HexColorInput">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>410</y>
+        <width>131</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Hex Color</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="StateComboBox">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>260</y>
+        <width>141</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>State</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alabama</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alaska</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Arizona</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Arkansas</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>California</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Colorado</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Connecticut</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Delaware</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Florida</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Georgia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Hawaii</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Idaho</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Illinois</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Indiana</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Iowa</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kansas</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kentucky</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Louisiana</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Maine</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Maryland</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Massachusetts</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Michigan</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Minnesota</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mississippi</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Missouri</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Montana</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nebraska</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nevada</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>New Hampshire</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>New Jersey</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>New Mexico</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>New York</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>North Carolina</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>North Dakota</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ohio</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Oklahoma</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Oregon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pennsylvania</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Rhode Island</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>South Carolina</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>South Dakota</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Tennessee</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Texas</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Utah</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vermont</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Virginia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Washington</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>West Virginia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wisconsin</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wyoming</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="HomeSearchURLInput">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>410</y>
+        <width>221</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Home Search URL</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="PhoneInput">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>291</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Phone</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="BlogURLInput">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>370</y>
+        <width>291</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Blog URL</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="HomeValueURLInput">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>410</y>
+        <width>221</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Home Value URL</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ZipInput">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>260</y>
+        <width>141</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Zip</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="EmailInput">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>110</y>
+        <width>291</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Email</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="LastNameInput">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>30</y>
+        <width>291</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Last Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CityInput">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>291</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>City</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Address1Input">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>291</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Address 1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Address2Input">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>220</y>
+        <width>291</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Address 2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="CancelBtn">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>560</y>
+        <width>84</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Cancel</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="SaveBtn">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>560</y>
+        <width>84</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CompanyNameInput">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>591</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Company Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="FirstNameInput">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>291</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>First Name</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="WebsiteURLInput">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>370</y>
+        <width>291</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Website URL</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="weblinklabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>340</y>
+        <width>101</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Web</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="weblinklabel_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>191</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Contact</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="weblinklabel_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>190</y>
+        <width>101</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Address</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2"/>
+   </widget>
+   <widget class="QListView" name="clientListView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>101</y>
+      <width>256</width>
+      <height>611</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>stackedWidget</zorder>
+   <zorder>clientListView</zorder>
+   <zorder>SaveBtn</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1267</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionAdd_Client"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAdd_Client">
+   <property name="text">
+    <string>Add Client</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

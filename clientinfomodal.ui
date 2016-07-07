@@ -47,307 +47,6 @@
          <property name="horizontalSpacing">
           <number>10</number>
          </property>
-         <item row="0" column="0">
-          <widget class="QLineEdit" name="CityInput">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>City</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLineEdit" name="ZipInput">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Zip</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QComboBox" name="StateComboBox">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <item>
-            <property name="text">
-             <string>State</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>AL</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>AK</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>AZ</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>AR</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>CA</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>CO</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>CT</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>DC</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>DE</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>FL</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>GA</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>HI</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>ID</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>IL</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>IN</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>IA</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>KS</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>KY</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>LA</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>ME</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>MD</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>MA</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>MI</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>MN</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>MS</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>MO</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>MT</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>NE</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>NV</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>NH</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>NJ</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>NM</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>NY</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>NC</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>ND</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>OH</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>OK</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>OR</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>PA</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>RI</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>SC</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>SD</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>TN</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>TX</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>UT</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>VA</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>VT</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>VA</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>WA</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>WV</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>WI</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>WY</string>
-            </property>
-           </item>
-          </widget>
-         </item>
         </layout>
        </widget>
       </item>
@@ -366,32 +65,6 @@
          <property name="horizontalSpacing">
           <number>10</number>
          </property>
-         <item row="0" column="0">
-          <widget class="QLineEdit" name="EmailInput">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Email</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="PhoneInput">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Phone</string>
-           </property>
-          </widget>
-         </item>
         </layout>
        </widget>
       </item>
@@ -410,45 +83,6 @@
          <property name="horizontalSpacing">
           <number>10</number>
          </property>
-         <item row="0" column="2">
-          <widget class="QLineEdit" name="HomeSearchURLInput">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Home Search URL</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="HomeValueURLInput">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Home Value URL</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLineEdit" name="BlogURLInput">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Blog URL</string>
-           </property>
-          </widget>
-         </item>
         </layout>
        </widget>
       </item>
@@ -467,35 +101,6 @@
          <property name="horizontalSpacing">
           <number>10</number>
          </property>
-         <item row="0" column="0">
-          <widget class="QLineEdit" name="FirstNameInput">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>First Name</string>
-           </property>
-           <property name="clearButtonEnabled">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="LastNameInput">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Last Name</string>
-           </property>
-          </widget>
-         </item>
         </layout>
        </widget>
       </item>
@@ -511,19 +116,6 @@
          <property name="bottomMargin">
           <number>0</number>
          </property>
-         <item row="0" column="0">
-          <widget class="QLineEdit" name="CompanyNameInput">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Company Name</string>
-           </property>
-          </widget>
-         </item>
         </layout>
        </widget>
       </item>
@@ -542,32 +134,6 @@
          <property name="horizontalSpacing">
           <number>10</number>
          </property>
-         <item row="0" column="0">
-          <widget class="QLineEdit" name="Address1Input">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Address 1</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="Address2Input">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Address 2</string>
-           </property>
-          </widget>
-         </item>
         </layout>
        </widget>
       </item>
@@ -586,35 +152,6 @@
          <property name="bottomMargin">
           <number>0</number>
          </property>
-         <item row="0" column="1">
-          <widget class="QPushButton" name="SaveBtn">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Save</string>
-           </property>
-           <property name="flat">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QPushButton" name="CancelBtn">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Cancel</string>
-           </property>
-          </widget>
-         </item>
          <item row="0" column="0">
           <spacer name="horizontalSpacer">
            <property name="orientation">
@@ -646,20 +183,7 @@
          <property name="horizontalSpacing">
           <number>10</number>
          </property>
-         <item row="0" column="0">
-          <widget class="QLineEdit" name="HexColorInput">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="placeholderText">
-            <string>Hex Color</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
+         <item row="0" column="1">
           <spacer name="horizontalSpacer_2">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -672,7 +196,7 @@
            </property>
           </spacer>
          </item>
-         <item row="0" column="1">
+         <item row="0" column="0">
           <spacer name="horizontalSpacer_3">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -693,24 +217,6 @@
    </item>
   </layout>
  </widget>
- <tabstops>
-  <tabstop>FirstNameInput</tabstop>
-  <tabstop>LastNameInput</tabstop>
-  <tabstop>CompanyNameInput</tabstop>
-  <tabstop>Address1Input</tabstop>
-  <tabstop>Address2Input</tabstop>
-  <tabstop>CityInput</tabstop>
-  <tabstop>StateComboBox</tabstop>
-  <tabstop>ZipInput</tabstop>
-  <tabstop>EmailInput</tabstop>
-  <tabstop>PhoneInput</tabstop>
-  <tabstop>BlogURLInput</tabstop>
-  <tabstop>HomeValueURLInput</tabstop>
-  <tabstop>HomeSearchURLInput</tabstop>
-  <tabstop>HexColorInput</tabstop>
-  <tabstop>SaveBtn</tabstop>
-  <tabstop>CancelBtn</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>
