@@ -1,5 +1,5 @@
 import sys
-import json
+import pickle
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from mailblender import Ui_MailBlender
@@ -12,12 +12,12 @@ class mailblenderGui(Ui_MailBlender):
         self.setupUi(MailBlender)
         self.SaveBtn.clicked.connect(self.addClientInfo)
         self.CancelBtn.clicked.connect(self.clearAddClientFields)
-        self.data = "data.json"
+        self.data = "data.dat"
         self.clientinfo = {}
 
         try:
             fileObject = open(self.data, "r")
-            self.clientinfo = json.load(fileObject)
+            self.clientinfo = pickle.load(fileObject)
             fileObject.close()
 
         # If no data file is found, return empty dictionary
@@ -25,15 +25,15 @@ class mailblenderGui(Ui_MailBlender):
             self.clientinfo = {}
 
     def write(self):
-        with open('data.json', mode='a', encoding='utf-8') as fileObject:
-            json.dump(self.clientinfo, fileObject)
+        fileObject = open(self.data, "wb")
+        pickle.dump(self.clientinfo, fileObject)
         fileObject.close()
 
     # Read Serialized file
-    def read(self, data):
+    def read(self):
         try:
-            fileObject = open(self.data, "r")
-            self.clientinfo = json.load(fileObject)
+            fileObject = open(self.data, "rb")
+            self.clientinfo = pickle.load(fileObject)
             fileObject.close()
 
         # If no data file is found, return empty dictionary
@@ -66,14 +66,14 @@ class mailblenderGui(Ui_MailBlender):
             print(zip)
 
         if hexColor.startswith('#') and len(hexColor) == 7:
-            self.hexColorFrame.setStyleSheet("QFrame#hexColorFrame{background-color:" + hexColor + ";}")
+            self.HexColorFrame.setStyleSheet("QFrame#HexColorFrame{background-color:" + hexColor + ";}")
             print(hexColor)
 
         else:
             hexColor = '#'+hexColor
             self.HexColorInput.clear()
             self.HexColorInput.insert(hexColor)
-            self.hexColorFrame.setStyleSheet("QFrame#hexColorFrame{background-color:" + hexColor + ";}")
+            self.HexColorFrame.setStyleSheet("QFrame#HexColorFrame{background-color:" + hexColor + ";}")
             print(hexColor)
 
         if state == 'State':
@@ -82,7 +82,8 @@ class mailblenderGui(Ui_MailBlender):
         client = self.clientinfo
         name = firstName + ' ' + lastName
         print(name)
-        client[name] = {
+        client = {
+            name: {
             'firstName': firstName,
             'lastName': lastName,
             'companyName': companyName,
@@ -98,11 +99,12 @@ class mailblenderGui(Ui_MailBlender):
             'homeSearch': homeSearch,
             'hexColor': hexColor
             }
-
+            }
+        print('this one', client['Brent Stradling'])
         self.write()
         self.clientListWidget.addItem(name)
         print(client)
-        self.clearAddClientFields()
+        # self.clearAddClientFields()
 
     def clearAddClientFields(self):
         self.FirstNameInput.clear()
@@ -119,7 +121,7 @@ class mailblenderGui(Ui_MailBlender):
         self.HomeValueURLInput.clear()
         self.HomeSearchURLInput.clear()
         self.HexColorInput.clear()
-        self.hexColorFrame.setStyleSheet("")
+        self.HexColorFrame.setStyleSheet("border: 1px solid rgb(129, 129, 129);")
 
 
 if __name__ == '__main__':
