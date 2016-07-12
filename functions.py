@@ -1,5 +1,5 @@
 import sys
-import pickle
+import json
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from mailblender import Ui_MailBlender
@@ -12,40 +12,27 @@ class mailblenderGui(Ui_MailBlender):
         self.setupUi(MailBlender)
         self.SaveBtn.clicked.connect(self.addClientInfo)
         self.CancelBtn.clicked.connect(self.clearAddClientFields)
-        self.data = "data.dat"
-        self.clientinfo = {}
-
+        self.appData = []
+        self.data = "data.json"
         try:
             fileObject = open(self.data, "r")
-            self.clientinfo = pickle.load(fileObject)
-            fileObject.close()
-
-        # If no data file is found, return empty dictionary
-        except:
-            self.clientinfo = {}
-
-    def write(self):
-        fileObject = open(self.data, "wb")
-        pickle.dump(self.clientinfo, fileObject)
-        fileObject.close()
-
-    # Read Serialized file
-    def read(self):
-        try:
-            fileObject = open(self.data, "rb")
-            self.clientinfo = pickle.load(fileObject)
+            self.appData = json.load(fileObject)
+            print(self.appData)
             fileObject.close()
 
         # If no data file is found, return empty dictionary
         except FileNotFoundError:
-            self.clientinfo = {}
+            self.appData = []
 
-    def phoneFormat(self, p):
-        return format(int(p[:-1]), ",").replace(",", "-") + p[-1]
+    def write(self):
+        fileObject = open(self.data, "w")
+        json.dump(self.appData, fileObject)
+        fileObject.close()
 
     def addClientInfo(self, mailblenderGui):
         firstName = self.FirstNameInput.text()
         lastName = self.LastNameInput.text()
+        fullName = firstName + ' ' + lastName
         companyName = self.CompanyNameInput.text()
         address1 = self.Address1Input.text()
         address2 = self.Address2Input.text()
@@ -57,33 +44,9 @@ class mailblenderGui(Ui_MailBlender):
         blog = self.BlogURLInput.text()
         homeValue = self.HomeValueURLInput.text()
         homeSearch = self.HomeSearchURLInput.text()
-        hexColor = self.HexColorInput.text()
+        hexColor = self.hexFormat(self.HexColorInput.text())
 
-        print(self.clientinfo)
-        if len(zip) != 5 and zip.isnumeric() == False:
-            print('Please enter a proper zip code')
-        elif len(zip) == 5 and zip.isnumeric() == True:
-            print(zip)
-
-        if hexColor.startswith('#') and len(hexColor) == 7:
-            self.HexColorFrame.setStyleSheet("QFrame#HexColorFrame{background-color:" + hexColor + ";}")
-            print(hexColor)
-
-        else:
-            hexColor = '#'+hexColor
-            self.HexColorInput.clear()
-            self.HexColorInput.insert(hexColor)
-            self.HexColorFrame.setStyleSheet("QFrame#HexColorFrame{background-color:" + hexColor + ";}")
-            print(hexColor)
-
-        if state == 'State':
-            print('Please select a State')
-
-        client = self.clientinfo
-        name = firstName + ' ' + lastName
-        print(name)
-        client = {
-            name: {
+        self.clientinfo = {fullName:{
             'firstName': firstName,
             'lastName': lastName,
             'companyName': companyName,
@@ -98,13 +61,12 @@ class mailblenderGui(Ui_MailBlender):
             'homeValue': homeValue,
             'homeSearch': homeSearch,
             'hexColor': hexColor
-            }
-            }
-        print('this one', client['Brent Stradling'])
+            }}
+        print(self.clientinfo)
+
+        self.appData.append(self.clientinfo)
         self.write()
-        self.clientListWidget.addItem(name)
-        print(client)
-        # self.clearAddClientFields()
+        print(self.appData)
 
     def clearAddClientFields(self):
         self.FirstNameInput.clear()
@@ -123,6 +85,23 @@ class mailblenderGui(Ui_MailBlender):
         self.HexColorInput.clear()
         self.HexColorFrame.setStyleSheet("border: 1px solid rgb(129, 129, 129);")
 
+    def hexFormat(self, hexColor):
+        if hexColor.startswith('#') and len(hexColor) == 7:
+            self.HexColorFrame.setStyleSheet("QFrame#HexColorFrame{background-color:" + hexColor + ";}")
+
+        else:
+            hexColor = '#' + hexColor
+            self.HexColorInput.clear()
+            self.HexColorInput.insert(hexColor)
+            self.HexColorFrame.setStyleSheet("QFrame#HexColorFrame{background-color:" + hexColor + ";}")
+            return hexColor
+
+    def phoneFormat(self, p):
+        return format(int(p[:-1]), ",").replace(",", "-") + p[-1]
+
+    def stateVerify(self):
+        if state == 'State':
+            print('Please select a State')
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
