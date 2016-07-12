@@ -32,8 +32,8 @@ padding: 0 10px;
        <widget class="QComboBox" name="StateComboBox">
         <property name="geometry">
          <rect>
-          <x>728</x>
-          <y>258</y>
+          <x>580</x>
+          <y>260</y>
           <width>141</width>
           <height>36</height>
          </rect>
@@ -308,8 +308,8 @@ padding: 0 10px;
        <widget class="QLineEdit" name="HomeSearchURLInput">
         <property name="geometry">
          <rect>
-          <x>278</x>
-          <y>394</y>
+          <x>281</x>
+          <y>446</y>
           <width>211</width>
           <height>36</height>
          </rect>
@@ -362,8 +362,8 @@ padding: 0 10px;
        <widget class="QLineEdit" name="BlogURLInput">
         <property name="geometry">
          <rect>
-          <x>578</x>
-          <y>348</y>
+          <x>581</x>
+          <y>400</y>
           <width>291</width>
           <height>36</height>
          </rect>
@@ -389,8 +389,8 @@ padding: 0 10px;
        <widget class="QLineEdit" name="HomeValueURLInput">
         <property name="geometry">
          <rect>
-          <x>498</x>
-          <y>394</y>
+          <x>501</x>
+          <y>446</y>
           <width>221</width>
           <height>36</height>
          </rect>
@@ -416,8 +416,8 @@ padding: 0 10px;
        <widget class="QLineEdit" name="ZipInput">
         <property name="geometry">
          <rect>
-          <x>578</x>
-          <y>258</y>
+          <x>730</x>
+          <y>260</y>
           <width>141</width>
           <height>36</height>
          </rect>
@@ -628,15 +628,15 @@ padding: 0 10px;
         <property name="placeholderText">
          <string>First Name</string>
         </property>
-        <property name="clearButtonEnabled" stdset="0">
+        <property name="clearButtonEnabled">
          <bool>false</bool>
         </property>
        </widget>
        <widget class="QLineEdit" name="WebsiteURLInput">
         <property name="geometry">
          <rect>
-          <x>278</x>
-          <y>348</y>
+          <x>281</x>
+          <y>400</y>
           <width>291</width>
           <height>36</height>
          </rect>
@@ -662,8 +662,8 @@ padding: 0 10px;
        <widget class="QLabel" name="WebLabel">
         <property name="geometry">
          <rect>
-          <x>277</x>
-          <y>318</y>
+          <x>280</x>
+          <y>370</y>
           <width>101</width>
           <height>18</height>
          </rect>
@@ -782,8 +782,8 @@ padding: 0 10px;
        <widget class="QLabel" name="BannerImageLabel">
         <property name="geometry">
          <rect>
-          <x>280</x>
-          <y>440</y>
+          <x>890</x>
+          <y>430</y>
           <width>191</width>
           <height>41</height>
          </rect>
@@ -806,8 +806,8 @@ padding: 0 10px;
        <widget class="QFrame" name="HexColorFrame">
         <property name="geometry">
          <rect>
-          <x>728</x>
-          <y>394</y>
+          <x>731</x>
+          <y>446</y>
           <width>141</width>
           <height>36</height>
          </rect>
@@ -920,6 +920,33 @@ border: 1px solid rgb(129, 129, 129);
          <string>Search</string>
         </property>
        </widget>
+       <widget class="QLineEdit" name="MarketAreaInput">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>310</y>
+          <width>591</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Market Area</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="page_2"/>
      </widget>
@@ -933,7 +960,7 @@ border: 1px solid rgb(129, 129, 129);
        </size>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
@@ -1012,7 +1039,7 @@ padding:10px 30px;
      <x>0</x>
      <y>0</y>
      <width>1175</width>
-     <height>30</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -1045,8 +1072,9 @@ padding:10px 30px;
   <tabstop>Address1Input</tabstop>
   <tabstop>Address2Input</tabstop>
   <tabstop>CityInput</tabstop>
-  <tabstop>ZipInput</tabstop>
   <tabstop>StateComboBox</tabstop>
+  <tabstop>ZipInput</tabstop>
+  <tabstop>MarketAreaInput</tabstop>
   <tabstop>WebsiteURLInput</tabstop>
   <tabstop>BlogURLInput</tabstop>
   <tabstop>HomeSearchURLInput</tabstop>
@@ -1054,6 +1082,8 @@ padding:10px 30px;
   <tabstop>HexColorInput</tabstop>
   <tabstop>SaveBtn</tabstop>
   <tabstop>CancelBtn</tabstop>
+  <tabstop>searchBoxInput</tabstop>
+  <tabstop>clientListWidget</tabstop>
  </tabstops>
  <resources/>
  <connections/>

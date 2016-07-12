@@ -1,5 +1,8 @@
 import sys
 import json
+import os
+import tinys3
+import boto3
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from mailblender import Ui_MailBlender
@@ -13,13 +16,16 @@ class mailblenderGui(Ui_MailBlender):
         self.SaveBtn.clicked.connect(self.addClientInfo)
         self.CancelBtn.clicked.connect(self.clearAddClientFields)
         self.appData = []
+        # self.conn = tinys3.Connection('AWS Access Key ID', 'AWS Secret Key')
         self.data = "data.json"
-
 
         try:
             fileObject = open(self.data, "r")
             self.appData = json.load(fileObject)
             fileObject.close()
+            # fileObject = open(self.data, "r")
+            # self.conn.upload(self.data, fileObject, 'vyralmarketing')
+            # fileObject.close()
 
         # If no data file is found, return empty dictionary
         except FileNotFoundError:
@@ -31,7 +37,9 @@ class mailblenderGui(Ui_MailBlender):
     def write(self):
         fileObject = open(self.data, "w")
         json.dump(self.appData, fileObject)
+        fileObject.write('\n')
         fileObject.close()
+
 
     def viewClientInfo(self):
         i = self.clientListWidget.currentRow()
@@ -45,13 +53,17 @@ class mailblenderGui(Ui_MailBlender):
         self.Address2Input.insert(clientinfolist[c].get('address2'))
         self.CityInput.insert(clientinfolist[c].get('city'))
         self.ZipInput.insert(clientinfolist[c].get('zip'))
-        self.StateComboBox.select(clientinfolist[c].get('state'))
+        # self.StateComboBox.currentText(clientinfolist[c].get('state'))
         self.EmailInput.insert(clientinfolist[c].get('email'))
         self.PhoneInput.insert(clientinfolist[c].get('phone'))
+        self.WebsiteURLInput.insert(clientinfolist[c].get('website'))
         self.BlogURLInput.insert(clientinfolist[c].get('blog'))
+        self.HomeSearchURLInput.insert(clientinfolist[c].get('homeSearch'))
         self.HomeValueURLInput.insert(clientinfolist[c].get('homeValue'))
-        self.HomeSearchURLInput.insert(clientinfolist[c].get('HomeSearch'))
         self.HexColorInput.insert(clientinfolist[c].get('hexColor'))
+        hexColor = self.HexColorInput.text()
+        self.HexColorFrame.setStyleSheet("QFrame#HexColorFrame{background-color:" + hexColor + ";}")
+        self.MarketAreaInput.insert(clientinfolist[c].get('marketArea'))
 
     def addClientInfo(self, mailblenderGui):
         firstName = self.FirstNameInput.text()
@@ -65,10 +77,12 @@ class mailblenderGui(Ui_MailBlender):
         state = self.StateComboBox.currentText()
         email = self.EmailInput.text()
         phone = self.phoneFormat(self.PhoneInput.text())
+        website = self.WebsiteURLInput.text()
         blog = self.BlogURLInput.text()
         homeValue = self.HomeValueURLInput.text()
         homeSearch = self.HomeSearchURLInput.text()
         hexColor = self.hexFormat(self.HexColorInput.text())
+        marketArea = self.MarketAreaInput.text()
 
         self.clientinfo = {
             fullName:
@@ -83,10 +97,12 @@ class mailblenderGui(Ui_MailBlender):
             'state': state,
             'email': email,
             'phone': phone,
+            'website': website,
             'blog': blog,
             'homeValue': homeValue,
             'homeSearch': homeSearch,
-            'hexColor': hexColor
+            'hexColor': hexColor,
+            'marketArea': marketArea
             }
         }
         self.appData.append(self.clientinfo)
@@ -106,10 +122,12 @@ class mailblenderGui(Ui_MailBlender):
         self.StateComboBox.currentText()
         self.EmailInput.clear()
         self.PhoneInput.clear()
+        self.WebsiteURLInput.clear()
         self.BlogURLInput.clear()
         self.HomeValueURLInput.clear()
         self.HomeSearchURLInput.clear()
         self.HexColorInput.clear()
+        self.MarketAreaInput.clear()
         self.HexColorFrame.setStyleSheet("border: 1px solid rgb(129, 129, 129);")
 
     def hexFormat(self, hexColor):
@@ -124,7 +142,10 @@ class mailblenderGui(Ui_MailBlender):
             return hexColor
 
     def phoneFormat(self, p):
-        return format(int(p[:-1]), ",").replace(",", "-") + p[-1]
+        try:
+            return format(int(p[:-1]), ",").replace(",", "-") + p[-1]
+        except ValueError:
+            print(p)
 
     def stateVerify(self):
         if state == 'State':
