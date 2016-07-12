@@ -14,20 +14,44 @@ class mailblenderGui(Ui_MailBlender):
         self.CancelBtn.clicked.connect(self.clearAddClientFields)
         self.appData = []
         self.data = "data.json"
+
+
         try:
             fileObject = open(self.data, "r")
             self.appData = json.load(fileObject)
-            print(self.appData)
             fileObject.close()
 
         # If no data file is found, return empty dictionary
         except FileNotFoundError:
             self.appData = []
+        for c in range(len(self.appData)):
+            self.clientListWidget.addItems(self.appData[c])
+        self.clientListWidget.currentItemChanged.connect(self.viewClientInfo)
 
     def write(self):
         fileObject = open(self.data, "w")
         json.dump(self.appData, fileObject)
         fileObject.close()
+
+    def viewClientInfo(self):
+        # i = self.clientListWidget.currentRow()
+        c = self.clientListWidget.currentItem().text()
+        print(c)
+
+        # self.FirstNameInput.insert(firstName)
+        # self.LastNameInput.insert()
+        # self.CompanyNameInput.insert()
+        # self.Address1Input.insert()
+        # self.Address2Input.insert()
+        # self.CityInput.insert()
+        # self.ZipInput.insert()
+        # self.StateComboBox.insert()
+        # self.EmailInput.insert()
+        # self.PhoneInput.insert()
+        # self.BlogURLInput.insert()
+        # self.HomeValueURLInput.insert()
+        # self.HomeSearchURLInput.insert()
+        # self.HexColorInput.insert()
 
     def addClientInfo(self, mailblenderGui):
         firstName = self.FirstNameInput.text()
@@ -46,7 +70,9 @@ class mailblenderGui(Ui_MailBlender):
         homeSearch = self.HomeSearchURLInput.text()
         hexColor = self.hexFormat(self.HexColorInput.text())
 
-        self.clientinfo = {fullName:{
+        self.clientinfo = {
+            fullName:
+            {
             'firstName': firstName,
             'lastName': lastName,
             'companyName': companyName,
@@ -61,12 +87,13 @@ class mailblenderGui(Ui_MailBlender):
             'homeValue': homeValue,
             'homeSearch': homeSearch,
             'hexColor': hexColor
-            }}
-        print(self.clientinfo)
-
+            }
+        }
         self.appData.append(self.clientinfo)
         self.write()
-        print(self.appData)
+        self.clientListWidget.addItems(self.clientinfo)
+        self.clearAddClientFields()
+
 
     def clearAddClientFields(self):
         self.FirstNameInput.clear()
