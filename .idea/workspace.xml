@@ -27,11 +27,11 @@
       <file leaf-file-name="functions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+            <state relative-caret-position="432">
+              <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#3677#4243#0" expanded="false" />
+                <element signature="e#3660#4226#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -526,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468305116223</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Nvm figured it out. used the output for the list number to shift the data into it's own variable. Now I can access the contents of a dictionary as expected. The Data for each client fills into the input boxes now.">
+      <created>1468305856239</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1468305856239</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -583,7 +590,8 @@
     <MESSAGE value="Added Search Box (non functional) and enlarged the text to 12px put in text so I don't have to keep typing stuff in when testing" />
     <MESSAGE value="Switched over to appending new data to an array and then pushed into a json file. Now I can use multidimensional dictionaries to store client data" />
     <MESSAGE value="Started working on the client list view. Displays the data from the loaded json file, prints to the console what is selected. Trying to figure out how use this to access the contents of the array holding the data for the selected key value. Finding it difficult because it is a double nested dictionary within an array." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started working on the client list view. Displays the data from the loaded json file, prints to the console what is selected. Trying to figure out how use this to access the contents of the array holding the data for the selected key value. Finding it difficult because it is a double nested dictionary within an array." />
+    <MESSAGE value="Nvm figured it out. used the output for the list number to shift the data into it's own variable. Now I can access the contents of a dictionary as expected. The Data for each client fills into the input boxes now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Nvm figured it out. used the output for the list number to shift the data into it's own variable. Now I can access the contents of a dictionary as expected. The Data for each client fills into the input boxes now." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -605,7 +613,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#3677#4243#0" expanded="false" />
+            <element signature="e#3660#4226#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -632,7 +640,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#3677#4243#0" expanded="false" />
+            <element signature="e#3660#4226#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -669,7 +677,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#3677#4243#0" expanded="false" />
+            <element signature="e#3660#4226#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -737,11 +745,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+        <state relative-caret-position="432">
+          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#3677#4243#0" expanded="false" />
+            <element signature="e#3660#4226#0" expanded="false" />
           </folding>
         </state>
       </provider>

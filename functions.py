@@ -36,7 +36,6 @@ class mailblenderGui(Ui_MailBlender):
     def viewClientInfo(self):
         i = self.clientListWidget.currentRow()
         c = self.clientListWidget.currentItem().text()
-        print(c)
         clientinfolist = self.appData[i]
         self.clearAddClientFields()
         self.FirstNameInput.insert(clientinfolist[c].get('firstName'))
