@@ -1,7 +1,5 @@
 import sys
 import json
-import os
-import tinys3
 import boto3
 
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -16,18 +14,19 @@ class mailblenderGui(Ui_MailBlender):
         self.SaveBtn.clicked.connect(self.addClientInfo)
         self.CancelBtn.clicked.connect(self.clearAddClientFields)
         self.appData = []
-        # self.conn = tinys3.Connection('AWS Access Key ID', 'AWS Secret Key')
-        self.data = "data.json"
+        self.s3 = boto3.resource('s3')
+        self.s3.Bucket('vyralmarketing').download_file('vyral-marketing/MailBlender/data.json', 'data.json')
+        self.data = 'data.json'
+        for bucket in self.s3.buckets.all():
+            print(bucket.name)
+
 
         try:
             fileObject = open(self.data, "r")
             self.appData = json.load(fileObject)
             fileObject.close()
-            # fileObject = open(self.data, "r")
-            # self.conn.upload(self.data, fileObject, 'vyralmarketing')
-            # fileObject.close()
 
-        # If no data file is found, return empty dictionary
+        # If no data file is found, return empty list
         except FileNotFoundError:
             self.appData = []
         for c in range(len(self.appData)):
@@ -39,6 +38,8 @@ class mailblenderGui(Ui_MailBlender):
         json.dump(self.appData, fileObject)
         fileObject.write('\n')
         fileObject.close()
+        self.s3.Bucket('vyralmarketing').upload_file('data.json', 'vyral-marketing/MailBlender/data.json')
+        print('success')
 
 
     def viewClientInfo(self):

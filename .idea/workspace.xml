@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e620318-45ed-40d1-a253-d16634e6a112" name="Default" comment="Nvm figured it out. used the output for the list number to shift the data into it's own variable. Now I can access the contents of a dictionary as expected. The Data for each client fills into the input boxes now.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mailblender.ui" afterPath="$PROJECT_DIR$/mailblender.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pymailblender.iml" afterPath="$PROJECT_DIR$/.idea/pymailblender.iml" />
+    <list default="true" id="3e620318-45ed-40d1-a253-d16634e6a112" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/data.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.py" afterPath="$PROJECT_DIR$/functions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mailblender.py" afterPath="$PROJECT_DIR$/mailblender.py" />
     </list>
     <ignored path="pymailblender.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +28,8 @@
       <file leaf-file-name="functions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="78" />
+            <state relative-caret-position="527">
+              <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -42,6 +39,16 @@
       </file>
       <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/data.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
@@ -88,14 +95,14 @@
         <option value="$PROJECT_DIR$/mailblender.py" />
         <option value="$PROJECT_DIR$/data.dat" />
         <option value="$PROJECT_DIR$/clientdata.py" />
-        <option value="$PROJECT_DIR$/data.json" />
         <option value="$PROJECT_DIR$/functions.py" />
+        <option value="$PROJECT_DIR$/data.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2130" />
-    <option name="y" value="30" />
+    <option name="x" value="2113" />
+    <option name="y" value="28" />
     <option name="width" value="1400" />
     <option name="height" value="971" />
   </component>
@@ -201,6 +208,11 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1059" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Richard Nixon\Documents\GitHub\pymailblender\images" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.functions">
     <configuration default="false" name="clientinfomodal" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -537,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468305856239</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added market area input and andded in the missing website variable. Started working with tinys3 to upload data to aws. Might look into alternatives though">
+      <created>1468355744627</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1468355744627</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -550,7 +569,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2130" y="30" width="1400" height="971" extended-state="0" />
+    <frame x="2113" y="28" width="1400" height="971" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12041116" sideWeight="0.49199083" order="1" side_tool="false" content_ui="combo" />
@@ -595,7 +614,8 @@
     <MESSAGE value="Switched over to appending new data to an array and then pushed into a json file. Now I can use multidimensional dictionaries to store client data" />
     <MESSAGE value="Started working on the client list view. Displays the data from the loaded json file, prints to the console what is selected. Trying to figure out how use this to access the contents of the array holding the data for the selected key value. Finding it difficult because it is a double nested dictionary within an array." />
     <MESSAGE value="Nvm figured it out. used the output for the list number to shift the data into it's own variable. Now I can access the contents of a dictionary as expected. The Data for each client fills into the input boxes now." />
-    <option name="LAST_COMMIT_MESSAGE" value="Nvm figured it out. used the output for the list number to shift the data into it's own variable. Now I can access the contents of a dictionary as expected. The Data for each client fills into the input boxes now." />
+    <MESSAGE value="Added market area input and andded in the missing website variable. Started working with tinys3 to upload data to aws. Might look into alternatives though" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added market area input and andded in the missing website variable. Started working with tinys3 to upload data to aws. Might look into alternatives though" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -621,7 +641,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.json">
+    <entry file="file://$PROJECT_DIR$/images/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -681,7 +701,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.json">
+    <entry file="file://$PROJECT_DIR$/images/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -763,7 +783,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.json">
+    <entry file="file://$PROJECT_DIR$/images/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
@@ -771,10 +791,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="78" />
+        <state relative-caret-position="527">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
