@@ -19,8 +19,10 @@ class mailblenderGui(Ui_MailBlender):
         self.data = 'data.json'
         for bucket in self.s3.buckets.all():
             print(bucket.name)
+        self.read()
 
-
+        self.loadClientList()
+    def read(self):
         try:
             fileObject = open(self.data, "r")
             self.appData = json.load(fileObject)
@@ -29,9 +31,6 @@ class mailblenderGui(Ui_MailBlender):
         # If no data file is found, return empty list
         except FileNotFoundError:
             self.appData = []
-        for c in range(len(self.appData)):
-            self.clientListWidget.addItems(self.appData[c])
-        self.clientListWidget.currentItemChanged.connect(self.viewClientInfo)
 
     def write(self):
         fileObject = open(self.data, "w")
@@ -40,6 +39,11 @@ class mailblenderGui(Ui_MailBlender):
         fileObject.close()
         self.s3.Bucket('vyralmarketing').upload_file('data.json', 'vyral-marketing/MailBlender/data.json')
         print('success')
+
+    def loadClientList(self):
+        for c in range(len(self.appData)):
+            self.clientListWidget.addItems(self.appData[c])
+        self.clientListWidget.currentItemChanged.connect(self.viewClientInfo)
 
 
     def viewClientInfo(self):
@@ -106,6 +110,10 @@ class mailblenderGui(Ui_MailBlender):
             'marketArea': marketArea
             }
         }
+        self.s3.Bucket('vyralmarketing').download_file('vyral-marketing/MailBlender/data.json', 'data.json')
+        del self.appData[:]
+        self.loadClientList()
+        self.read()
         self.appData.append(self.clientinfo)
         self.write()
         self.clientListWidget.addItems(self.clientinfo)
