@@ -34,8 +34,7 @@ class mailblenderGui(Ui_MailBlender):
 
     def write(self):
         fileObject = open(self.data, "w")
-        json.dump(self.appData, fileObject)
-        fileObject.write('\n')
+        json.dump(self.appData, fileObject, indent=4)
         fileObject.close()
         self.s3.Bucket('vyralmarketing').upload_file('data.json', 'vyral-marketing/MailBlender/data.json')
         print('success')
@@ -44,6 +43,7 @@ class mailblenderGui(Ui_MailBlender):
         for c in range(len(self.appData)):
             self.clientListWidget.addItems(self.appData[c])
         self.clientListWidget.currentItemChanged.connect(self.viewClientInfo)
+        self.clientListWidget.sortItems()
 
 
     def viewClientInfo(self):
@@ -69,6 +69,9 @@ class mailblenderGui(Ui_MailBlender):
         hexColor = self.HexColorInput.text()
         self.HexColorFrame.setStyleSheet("QFrame#HexColorFrame{background-color:" + hexColor + ";}")
         self.MarketAreaInput.insert(clientinfolist[c].get('marketArea'))
+
+    def removeClient(self):
+        print('removed')
 
     def addClientInfo(self, mailblenderGui):
         firstName = self.FirstNameInput.text()
@@ -117,6 +120,7 @@ class mailblenderGui(Ui_MailBlender):
         self.appData.append(self.clientinfo)
         self.write()
         self.clientListWidget.addItems(self.clientinfo)
+        self.clientListWidget.sortItems()
         self.clearAddClientFields()
 
 
