@@ -12,7 +12,7 @@ class mailblenderGui(Ui_MailBlender):
         Ui_MailBlender.__init__(self)
         self.setupUi(MailBlender)
         self.SaveBtn.clicked.connect(self.addClientInfo)
-        self.CancelBtn.clicked.connect(self.clearAddClientFields)
+        self.CancelBtn.clicked.connect(self.removeClient)
         self.appData = []
         self.s3 = boto3.resource('s3')
         self.s3.Bucket('vyralmarketing').download_file('vyral-marketing/MailBlender/data.json', 'data.json')
@@ -71,7 +71,13 @@ class mailblenderGui(Ui_MailBlender):
         self.MarketAreaInput.insert(clientinfolist[c].get('marketArea'))
 
     def removeClient(self):
-        print('removed')
+        i = self.clientListWidget.currentRow()
+        c = self.clientListWidget.currentItem().text()
+        print(self.appData[i])
+        del self.appData[i]
+        print(self.appData)
+        self.write()
+
 
     def addClientInfo(self, mailblenderGui):
         firstName = self.FirstNameInput.text()
