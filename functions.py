@@ -58,7 +58,7 @@ class mailblenderGui(Ui_MailBlender):
         self.Address2Input.insert(clientinfolist[c].get('address2'))
         self.CityInput.insert(clientinfolist[c].get('city'))
         self.ZipInput.insert(clientinfolist[c].get('zip'))
-        # self.StateComboBox.currentText(clientinfolist[c].get('state'))
+        self.StateComboBox.setCurrentIndex(clientinfolist[c].get('state'))
         self.EmailInput.insert(clientinfolist[c].get('email'))
         self.PhoneInput.insert(clientinfolist[c].get('phone'))
         self.WebsiteURLInput.insert(clientinfolist[c].get('website'))
@@ -88,7 +88,7 @@ class mailblenderGui(Ui_MailBlender):
         address2 = self.Address2Input.text()
         city = self.CityInput.text()
         zip = self.ZipInput.text()
-        state = self.StateComboBox.currentText()
+        state = self.StateComboBox.currentIndex()
         email = self.EmailInput.text()
         phone = self.phoneFormat(self.PhoneInput.text())
         website = self.WebsiteURLInput.text()
@@ -125,7 +125,9 @@ class mailblenderGui(Ui_MailBlender):
         self.read()
         self.appData.append(self.clientinfo)
         self.write()
+        self.clientListWidget.removeItems(self.clientinfo)
         self.clientListWidget.addItems(self.clientinfo)
+
         self.clientListWidget.sortItems()
         self.clearAddClientFields()
 
@@ -138,7 +140,7 @@ class mailblenderGui(Ui_MailBlender):
         self.Address2Input.clear()
         self.CityInput.clear()
         self.ZipInput.clear()
-        self.StateComboBox.currentText()
+        self.StateComboBox.setCurrentIndex(0)
         self.EmailInput.clear()
         self.PhoneInput.clear()
         self.WebsiteURLInput.clear()
@@ -153,13 +155,14 @@ class mailblenderGui(Ui_MailBlender):
         if hexColor.startswith('#') and len(hexColor) == 7:
             self.HexColorFrame.setStyleSheet("QFrame#HexColorFrame{background-color:" + hexColor + ";}")
 
-        else:
+        elif len(hexColor) == 6:
             hexColor = '#' + hexColor
             self.HexColorInput.clear()
             self.HexColorInput.insert(hexColor)
             self.HexColorFrame.setStyleSheet("QFrame#HexColorFrame{background-color:" + hexColor + ";}")
             return hexColor
-
+        else:
+            self.HexColorInput.clear()
     def phoneFormat(self, p):
         try:
             return format(int(p[:-1]), ",").replace(",", "-") + p[-1]
